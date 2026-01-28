@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: calculator-pod
+spec:
+ nodeSelector:
+  app: project
+ containers:
+  - name: cont1
+    image:  772317732952.dkr.ecr.us-east-1.amazonaws.com/calculator-java:1.0.34   
+ imagePullSecrets:
+  - name: ecr-secret
